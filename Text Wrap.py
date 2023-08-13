@@ -1,7 +1,7 @@
 import textwrap
 
 
-def wrap(string, max_width):
+def wrap_user_method(string, max_width):
     wraped_string = ""
     putnewline = 1
 
@@ -13,6 +13,16 @@ def wrap(string, max_width):
         putnewline += 1
 
     return wraped_string
+
+
+def wrap_builtin_method(string, max_width):
+    wraped_string = textwrap.wrap(string, max_width)
+    return "\n".join(wraped_string)
+
+
+def wrap(string, max_width):
+    # return wrap_user_method
+    return wrap_builtin_method(string, max_width)
 
 
 if __name__ == "__main__":
