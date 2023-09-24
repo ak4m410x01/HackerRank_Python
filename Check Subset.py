@@ -7,12 +7,24 @@ while t > 0:
     b = int(input())
     set_b = set(map(int, input().split()))
 
-    is_subset = True
+    # Solution 1
+    # -----------
 
-    for item_a in set_a:
-        if item_a not in set_b:
-            is_subset = False
-            break
+    # is_subset = True
+
+    # for item_a in set_a:
+    #     if item_a not in set_b:
+    #         is_subset = False
+    #         break
+
+    # is_subset = True
+
+    # ======================
+
+    # Solution 2
+    # -----------
+
+    is_subset = set_a.issubset(set_b)
 
     print(is_subset)
 
