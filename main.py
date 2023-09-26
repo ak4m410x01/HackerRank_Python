@@ -1,6 +1,4 @@
-a = int(input())
-b = int(input())
+n = int(input())
 
-ans = divmod(a, b)
-
-print(f"{ans[0]}\n{ans[1]}\n{ans}")
+for i in range(1, n):
+    print(i * f"{i}")
